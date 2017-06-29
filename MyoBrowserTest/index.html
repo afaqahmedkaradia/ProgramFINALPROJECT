@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>A Flocking Project</title>
+
+    <script src="flocking/flocking-all.js"></script>
+    <script src="osc.js"></script>
+
+    <script>
+        function play() {
+            myStuff.play();
+        }
+
+
+        // Simple sine wave oscillator
+        var synth = flock.synth({
+            synthDef: {
+                ugen: "flock.ugen.sinOsc",
+                freq: 440,
+                mul: 0.25
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Your markup goes here -->
+
+    <button onclick="synth.play()">Play</button>
+    <button onclick=" synth.pause()">Stop</button>
+
+</body>
+
+</html>
